@@ -1,0 +1,4 @@
+tablero = [
+    [" ", "|", " ",]
+]
+*args, **kwargs
