@@ -1,4 +1,3 @@
 tablero = [
     [" ", "|", " ",]
 ]
-*args, **kwargs
