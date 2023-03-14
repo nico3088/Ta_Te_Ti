@@ -1,11 +1,3 @@
-tablero = [
-    [" ", "|", " ", "|", " "],
-    ["-", "+", "-", "+", "-"],
-    [" ", "|", " ", "|", " "],
-    ["-", "+", "-", "+", "-"],
-    [" ", "|", " ", "|", " "]
-]
-
 def imprimir_tablero(tablero):
     for fila in tablero:
         for i in range(len(fila)):
@@ -14,11 +6,12 @@ def imprimir_tablero(tablero):
             else:
                 print(fila[i], end="  ")
 
+
 def cambiar_tablero(tablero, posicion, jugador):
     if jugador:
-        simbolo = "X"
+        simbolo = "x"
     else:
-        simbolo = "O"
+        simbolo = "o"
     
     if posicion == 1:
         if tablero[4][0] == " ":
@@ -74,9 +67,12 @@ def cambiar_tablero(tablero, posicion, jugador):
             return 0
         else:
             return "Ese lugar está ocupado."
-        
+    else:
+        return "Esa posicion no existe."    
+
+
 def ganador(tablero):
-    for simbolo in ["X", "O"]:
+    for simbolo in ["x", "o"]:
         fila_0 = tablero[0][0] == simbolo and tablero[0][2] == simbolo and tablero[0][4] == simbolo
         fila_2 = tablero[2][0] == simbolo and tablero[2][2] == simbolo and tablero[2][4] == simbolo
         fila_4 = tablero[4][0] == simbolo and tablero[4][2] == simbolo and tablero[4][4] == simbolo
@@ -87,20 +83,25 @@ def ganador(tablero):
         diagonal_arriba = tablero[4][0] == simbolo and tablero[2][2] == simbolo and tablero[0][4] == simbolo
     
         if fila_0 or fila_2 or fila_4 or columna_0 or columna_2 or columna_4 or diagonal_abajo or diagonal_arriba:
-            if simbolo == "X":
-             return 1
-            elif simbolo == "O":
+            if simbolo == "x":
+                return 1
+            elif simbolo == "o":
                 return 2
             break
 
-
-
+tablero = [
+    [" ", "|", " ", "|", " "],
+    ["-", "+", "-", "+", "-"],
+    [" ", "|", " ", "|", " "],
+    ["-", "+", "-", "+", "-"],
+    [" ", "|", " ", "|", " "]
+]
 
 turno_1 = True
 jugador_1 = " "
 jugador_2 = " "
 turno = 0
-
+        
 imprimir_tablero(tablero)
 while turno < 9:
     if jugador_1 == " ":
@@ -113,6 +114,7 @@ while turno < 9:
             print(jugador_1 + ", elegí una posición")
         else:
             print(jugador_2 + ", elegí una posición")
+        
         jugada = int(input())
         
         valor = cambiar_tablero(tablero,jugada,turno_1)
@@ -122,11 +124,144 @@ while turno < 9:
            imprimir_tablero(tablero)
            if ganador(tablero) == 1:
                print(jugador_1 + "ganó")
+               break
            elif ganador(tablero) == 2:
                print(jugador_2 +"ganó")  
                break
         else:
             print(valor)    
+        
         if turno == 9:
             print("Empate!!!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
