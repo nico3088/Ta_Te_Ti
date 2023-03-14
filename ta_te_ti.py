@@ -14,6 +14,49 @@ def imprimir_tablero(tablero):
             else:
                 print(fila[i], end="  ")
 
+def cambiar_tablero(tablero, posicion, jugador):
+    if jugador:
+        simbolo = "X"
+    else:
+        simbolo = "O"
+    
+    if posicion == 1:
+        if tablero[4][0] == " ":
+            tablero[4][0] == simbolo
+            return 0
+        else:
+            return "Ese lugar está ocupado."
+    elif posicion == 2:
+        if tablero[4][2] == " ":
+            tablero[4][2] == simbolo
+            return 0
+        else:
+            return "Ese lugar está ocupado."
+    elif posicion == 3:
+        if tablero[4][4] == " ":
+            tablero[4][4] == simbolo
+            return 0
+        else:
+            return "Ese lugar está ocupado."
+    elif posicion == 4:
+        if tablero[2][0] == " ":
+            tablero[2][0] == simbolo
+            return 0
+        else:
+            return "Ese lugar está ocupado."
+    elif posicion == 5:
+        if tablero[2][2] == " ":
+            tablero[2][2] == simbolo
+            return 0
+        else:
+            return "Ese lugar está ocupado."    
+    elif posicion == 6:
+        if tablero[2][4] == " ":
+         tablero[2][4] == simbolo
+         return 0
+        else:
+            return "Ese lugar está ocupado."
+
 turno_1 = True
 jugador_1 = " "
 jugador_2 = " "
