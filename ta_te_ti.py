@@ -1,7 +1,7 @@
 def imprimir_tablero(tablero):
     for fila in tablero:
         for i in range(len(fila)):
-            if i == len(fila) -1:
+            if i == len(fila) - 1:
                 print(fila[i], end="\n")
             else:
                 print(fila[i], end="  ")
@@ -9,66 +9,66 @@ def imprimir_tablero(tablero):
 
 def cambiar_tablero(tablero, posicion, jugador):
     if jugador:
-        simbolo = "x"
+        simbolo = 'x'
     else:
-        simbolo = "o"
+        simbolo = 'o'
     
     if posicion == 1:
-        if tablero[4][0] == " ":
-            tablero[4][0] == simbolo
+        if tablero[4][0] == ' ':
+            tablero[4][0] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 2:
-        if tablero[4][2] == " ":
-            tablero[4][2] == simbolo
+        if tablero[4][2] == ' ':
+            tablero[4][2] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 3:
-        if tablero[4][4] == " ":
-            tablero[4][4] == simbolo
+        if tablero[4][4] == ' ':
+            tablero[4][4] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 4:
-        if tablero[2][0] == " ":
-            tablero[2][0] == simbolo
+        if tablero[2][0] == ' ':
+            tablero[2][0] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 5:
-        if tablero[2][2] == " ":
-            tablero[2][2] == simbolo
+        if tablero[2][2] == ' ':
+            tablero[2][2] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."    
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 6:
-        if tablero[2][4] == " ":
-            tablero[2][4] == simbolo
+        if tablero[2][4] == ' ':
+            tablero[2][4] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 7:
-        if tablero[0][0] == " ":
-            tablero[0][0] == simbolo
+        if tablero[0][0] == ' ':
+            tablero[0][0] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 8:
-        if tablero[0][2] == " ":
-            tablero[0][2] == simbolo
+        if tablero[0][2] == ' ':
+            tablero[0][2] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     elif posicion == 9:
-        if tablero[0][4] == " ":
-            tablero[0][4] == simbolo
+        if tablero[0][4] == ' ':
+            tablero[0][4] = simbolo
             return 0
         else:
-            return "Ese lugar está ocupado."
+            return 'Esa posicion ya esta ocupada.'
     else:
-        return "Esa posicion no existe."    
+        return 'Esa posicion no existe.'
 
 
 def ganador(tablero):
@@ -123,10 +123,10 @@ while turno < 9:
            turno += 1
            imprimir_tablero(tablero)
            if ganador(tablero) == 1:
-               print(jugador_1 + "ganó")
+               print(jugador_1 + " ganó")
                break
            elif ganador(tablero) == 2:
-               print(jugador_2 +"ganó")  
+               print(jugador_2 +" ganó")  
                break
         else:
             print(valor)    
